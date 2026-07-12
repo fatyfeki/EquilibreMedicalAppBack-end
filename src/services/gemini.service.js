@@ -121,28 +121,62 @@ function withTimeout(promise, ms) {
   ]);
 }
 
+// Message affiché à l'utilisateur final quand Gemini est injoignable
+// (panne Google, clé invalide, quota, etc.) : jamais l'erreur brute.
+const FRIENDLY_UNAVAILABLE_MESSAGE =
+  "Dermobot est temporairement indisponible 🌿. Réessayez dans quelques instants, ou consultez directement nos fiches produits dans l'app.";
+
+// Détecte les erreurs connues côté Google (bug clés AQ., quota, clé
+// invalide) pour les distinguer d'une vraie erreur de notre code.
+function isUpstreamGeminiError(err) {
+  const msg = (err && err.message) || "";
+  return (
+    msg.includes("ACCESS_TOKEN_TYPE_UNSUPPORTED") ||
+    msg.includes("API_KEY_INVALID") ||
+    msg.includes("API key not valid") ||
+    msg.includes("429") ||
+    msg.includes("401") ||
+    msg.includes("Quota exceeded") ||
+    msg.startsWith("Timeout:")
+  );
+}
+
 async function getGeminiReply(history, message) {
   console.log("➡️  Appel Gemini avec le message:", message);
 
-  const model = genAI.getGenerativeModel({
-    model: "gemini-2.0-flash",
-    systemInstruction: SYSTEM_INSTRUCTION,
-  });
+  try {
+    const model = genAI.getGenerativeModel({
+      model: "gemini-2.0-flash",
+      systemInstruction: SYSTEM_INSTRUCTION,
+    });
 
-  const chat = model.startChat({
-    history: formatHistory(history),
-  });
+    const chat = model.startChat({
+      history: formatHistory(history),
+    });
 
-  const result = await withTimeout(chat.sendMessage(message), 15000);
-  const text = result.response.text();
+    const result = await withTimeout(chat.sendMessage(message), 15000);
+    const text = result.response.text();
 
-  console.log("⬅️  Réponse Gemini reçue (", text.length, "caractères )");
+    console.log("⬅️  Réponse Gemini reçue (", text.length, "caractères )");
 
-  if (!text) {
-    throw new Error("Réponse vide reçue de Gemini.");
+    if (!text) {
+      throw new Error("Réponse vide reçue de Gemini.");
+    }
+
+    return text.trim();
+  } catch (err) {
+    if (isUpstreamGeminiError(err)) {
+      // On logue le détail technique côté serveur pour le debug,
+      // mais on ne renvoie jamais ça à l'app mobile.
+      console.error("⚠️  Panne Gemini (upstream) :", err.message);
+      const friendlyErr = new Error(FRIENDLY_UNAVAILABLE_MESSAGE);
+      friendlyErr.status = 503; // Service Unavailable
+      throw friendlyErr;
+    }
+    // Erreur inattendue (bug dans notre propre code) : on la laisse
+    // remonter telle quelle, elle sera loguée normalement.
+    throw err;
   }
-
-  return text.trim();
 }
 
 module.exports = { getGeminiReply };
