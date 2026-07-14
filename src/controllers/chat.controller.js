@@ -1,5 +1,5 @@
 // src/controllers/chat.controller.js
-const { getGeminiReply } = require("../services/gemini.service");
+const { getChatReply } = require("../services/llm.service");
 
 async function postChat(req, res, next) {
   try {
@@ -15,7 +15,7 @@ async function postChat(req, res, next) {
       return res.status(400).json({ error: "Le champ 'history' doit être un tableau." });
     }
 
-    const reply = await getGeminiReply(history, message);
+    const reply = await getChatReply(history, message);
     res.json({ reply });
   } catch (err) {
     next(err);
