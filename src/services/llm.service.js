@@ -40,9 +40,9 @@ const PRODUITS_EN_STOCK = PRODUCTS.filter((p) => p.en_stock !== false);
 //    tokens (contrainte du plan gratuit Groq : 6000-8000 tokens/minute).
 // ---------------------------------------------------------------------
 function buildCatalogIndex(products) {
-  return products
-    .map((p) => `- [${p.id}] ${p.nom} — ${p.categorie} — ${p.lien_produit}`)
-    .join("\n");
+  // Format volontairement minimaliste : id, nom, catégorie, lien - un
+  // token économisé ici est répété 47 fois.
+  return products.map((p) => `[${p.id}] ${p.nom} (${p.categorie}) ${p.lien_produit}`).join("\n");
 }
 
 const CATALOG_INDEX = buildCatalogIndex(PRODUITS_EN_STOCK);
@@ -96,7 +96,7 @@ function extractKeywords(text) {
 // catégorie, les actifs, le type de peau et la description. C'est un RAG
 // volontairement simple (pas d'embeddings) : suffisant pour ~50 produits,
 // et surtout ça évite de dépasser les quotas de tokens du plan gratuit.
-function getRelevantProducts(message, products, maxResults = 8) {
+function getRelevantProducts(message, products, maxResults = 5) {
   const keywords = extractKeywords(message);
   if (keywords.length === 0) return [];
 
@@ -198,36 +198,12 @@ choisir les bons soins et à comprendre les ingrédients.
   ce seuil, dis que tu n'as pas le montant exact et renvoie vers la page
   panier/livraison de l'app).
 
-# Univers de produits (utilise ces catégories quand tu recommandes)
-1. **Soin visage**
-   - Gamme Vitamine C & Caféine (mousse nettoyante, sérum, crème) :
-     éclat du teint, anti-fatigue, effet antioxydant.
-   - Crèmes solaires (SPF 50+, formules minérales invisibles).
-   - Patchs masque : anti-âge, anti-cernes.
-   - Masques sérum : anti-taches, anti-rides, anti-fatigue, anti-âge,
-     anti-pollution (souvent au charbon végétal), anti-rougeur.
-2. **Soin capillaire**
-   - Gamme Hair Growth (anti-chute et repousse) : bain d'huiles,
-     shampoing fortifiant, lotion stimulante — actifs clés : feuille
-     d'olivier, biotine.
-   - Gamme Hair Repair (réparation et nutrition) : shampoing, après-
-     shampoing, masque SOS pointes — actifs clés : beurre d'olive,
-     protéine de soie.
-   - Packs et routines capillaires combinant plusieurs produits.
-3. **Soin du corps**
-   - Mains et ongles (ex. crème au miel).
-   - Pieds et talons (baumes réparateurs).
-   - Déodorants naturels (sans alcool, sans aluminium).
-4. **Packs soins** : routines complètes à prix réduit (ex. Pack Vitamine
-   C & Caféine, Pack Hair Growth anti-chute, Pack Spa à la maison, Pack
-   Régénération Nocturne, Pack Pureté Détox, Pack Summer Essentials).
-
-# Ingrédients actifs à connaître
-Vitamine C (antioxydante, éclat), Caféine (anti-fatigue, tonifiante),
-Acide Hyaluronique (hydratation), Beurre d'Olive (nourrissant), Protéine
-de Soie et Biotine (fibre capillaire, pousse), Charbon végétal actif
-(purifiant), Miel (nourrissant, apaisant), huiles précieuses et extraits
-botaniques (apaisants).
+# Univers de produits
+4 grandes familles au catalogue : Soin visage, Soin capillaire, Soin du
+corps, et des Packs soins combinant plusieurs produits à prix réduit.
+Le détail exact (produits, actifs, prix) t'est donné plus bas dans
+l'INDEX et les DÉTAILS — ne t'appuie pas sur tes connaissances générales
+en cosmétique pour compléter.
 
 # Ce que tu fais
 - Tu aides à identifier le bon type de peau/cheveux et à orienter vers
@@ -327,7 +303,10 @@ async function callProvider(client, model, messages, label) {
       // Température basse : on privilégie la fidélité au catalogue à la
       // créativité. 0.7 était trop haut pour un bot de vente encadré.
       temperature: 0.2,
-      max_tokens: 800,
+      // Réduit de 800 à 500 : les réponses du bot sont censées être
+      // courtes (2-5 phrases, cf. consignes de ton) et ce budget compte
+      // aussi dans le quota tokens/minute de Groq.
+      max_tokens: 500,
     }),
     15000,
     label,
