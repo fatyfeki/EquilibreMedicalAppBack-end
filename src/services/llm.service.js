@@ -1,4 +1,6 @@
 // src/services/llm.service.js
+const fs = require("fs");
+const path = require("path");
 const OpenAI = require("openai");
 const {
   GROQ_API_KEY,
@@ -6,6 +8,54 @@ const {
   OPENROUTER_API_KEY,
   OPENROUTER_MODEL,
 } = require("../config/env");
+
+// ---------------------------------------------------------------------
+// Catalogue produits (source unique de vérité pour le bot)
+// ---------------------------------------------------------------------
+const PRODUCTS_PATH = path.join(__dirname, "../data/products.json");
+
+let PRODUCTS = [];
+try {
+  const raw = fs.readFileSync(PRODUCTS_PATH, "utf-8");
+  PRODUCTS = JSON.parse(raw);
+  console.log(`📦 Catalogue chargé : ${PRODUCTS.length} produits (${PRODUCTS_PATH})`);
+} catch (err) {
+  console.error("❌ Impossible de charger products.json :", err.message);
+  PRODUCTS = [];
+}
+
+if (PRODUCTS.length === 0) {
+  console.warn(
+    "⚠️  ATTENTION : catalogue produits vide. Le bot n'a AUCUNE base pour " +
+      "ses recommandations et risque d'halluciner ou de refuser de répondre.",
+  );
+}
+
+// Transforme le catalogue JSON en un bloc de texte compact, lisible par
+// le modèle, à injecter dans le system prompt. On ne garde que les
+// produits en stock (inutile de proposer une rupture de stock).
+function formatCatalogForPrompt(products) {
+  const enStock = products.filter((p) => p.en_stock !== false);
+
+  return enStock
+    .map((p) => {
+      const actifs = (p.actifs_cles || []).join(", ") || "N/A";
+      const typePeau = (p.type_peau || []).join(", ") || "N/A";
+      const prix = p.prix_tnd != null ? `${p.prix_tnd} TND` : "prix non communiqué";
+      return (
+        `- [${p.id}] ${p.nom}\n` +
+        `  Catégorie: ${p.categorie}${p.sous_categorie ? " > " + p.sous_categorie : ""}\n` +
+        `  Description: ${p.description_courte}\n` +
+        `  Actifs clés: ${actifs}\n` +
+        `  Type de peau/usage: ${typePeau}\n` +
+        `  Prix: ${prix}\n` +
+        `  Lien: ${p.lien_produit}`
+      );
+    })
+    .join("\n\n");
+}
+
+const CATALOG_BLOCK = formatCatalogForPrompt(PRODUCTS);
 
 // Groq et OpenRouter exposent tous les deux une API compatible OpenAI :
 // même client, on change juste baseURL + clé.
@@ -105,11 +155,35 @@ botaniques (apaisants).
   contre-indications spécifiques, usage de médicaments), tu recommandes
   clairement de consulter un dermatologue ou un médecin, et tu ne
   donnes pas de posologie ou de diagnostic à sa place.
-- Tu n'inventes jamais de prix, de stock ou de promotions précises que
-  tu ne connais pas avec certitude : si on te demande un prix exact ou
-  une disponibilité, dis que ça peut varier et renvoie vers la fiche
-  produit dans l'app.
 - Tu ne recommandes jamais de marques ou produits concurrents.
+
+# CATALOGUE OFFICIEL (source unique de vérité)
+Voici la liste EXHAUSTIVE et EXACTE des produits Équilibre Médical
+actuellement en stock. C'est ta SEULE source pour recommander un
+produit, citer un prix, un actif ou un lien.
+
+${CATALOG_BLOCK}
+
+# Règles absolues liées au catalogue
+1. **Source unique** : Tu ne recommandes JAMAIS un produit qui n'est pas
+   dans la liste ci-dessus. Tu ne dois JAMAIS inventer un nom de produit,
+   un prix, un lien ou un actif qui n'y figure pas.
+2. **Cite le lien** : Quand tu recommandes un produit du catalogue,
+   inclus toujours son lien exact (format Markdown), ex:
+   [Sérum Vitamine C & Caféine](https://equilibremedical.com/produit/...).
+3. **Prix** : Utilise UNIQUEMENT le prix indiqué dans le catalogue. S'il
+   est marqué "prix non communiqué", dis que le prix exact est visible
+   sur la fiche produit dans l'app, sans donner de chiffre.
+4. **Produit absent du catalogue** : Si l'utilisateur demande un produit,
+   un ingrédient ou un besoin qu'aucun produit du catalogue ne couvre,
+   réponds poliment que ce produit spécifique n'est pas disponible chez
+   Équilibre Médical, puis propose l'alternative la plus proche du
+   catalogue si elle existe. Si vraiment rien ne correspond, dis-le
+   simplement et propose de contacter l'équipe Équilibre Médical.
+5. **Jamais d'invention** : Si le catalogue ne te permet pas de répondre
+   avec certitude, ne complète jamais par tes connaissances générales
+   sur les cosmétiques pour "deviner" un produit — dis que tu ne sais
+   pas.
 `.trim();
 
 // Le frontend envoie { role: "user" | "model", text }, on convertit
@@ -145,7 +219,9 @@ async function callProvider(client, model, messages, label) {
     client.chat.completions.create({
       model,
       messages,
-      temperature: 0.7,
+      // Température basse : on privilégie la fidélité au catalogue à la
+      // créativité. 0.7 était trop haut pour un bot de vente encadré.
+      temperature: 0.2,
       max_tokens: 800,
     }),
     15000,

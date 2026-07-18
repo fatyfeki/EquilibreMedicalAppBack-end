@@ -1,0 +1,994 @@
+[
+  {
+    "id": "1478",
+    "nom": "Shampoing réparateur et nourrissant cheveux mixtes à gras",
+    "categorie": "Soin capillaire",
+    "sous_categorie": "Réparation et Nutrition",
+    "toutes_categories": [
+      "Soin capillaire > Réparation et Nutrition",
+      "Soin capillaire"
+    ],
+    "description_courte": "Shampoing crème réparateur et nourrissant au Beurre d’Olive et Protéine de Soie. Rééquilibre les cheveux mixtes à gras, répare la fibre et apporte douceur et légèreté. 96 % d’ingrédients d’origine naturelle, sans sulfates, silicones ni colorants. +100 ml gratuit.",
+    "actifs_cles": [
+      "Beurre d'Olive",
+      "Protéine de Soie",
+      "Ortie",
+      "Vitamine B3",
+      "Soie"
+    ],
+    "type_peau": [
+      "Cheveux/peau mixte à grasse"
+    ],
+    "prix_tnd": 24.8,
+    "lien_produit": "https://equilibremedical.com/produit/shampoing-reparateur-et-nourrissant-cheveux-mixtes-a-gras/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1490",
+    "nom": "Shampoing réparateur nourrissant cheveux normaux à secs",
+    "categorie": "Soin capillaire",
+    "sous_categorie": "Réparation et Nutrition",
+    "toutes_categories": [
+      "Soin capillaire > Réparation et Nutrition",
+      "Soin capillaire"
+    ],
+    "description_courte": "Shampoing crème réparateur au Beurre d’Olive et Protéine de Soie. Nourrit intensément, répare la fibre et redonne douceur, force et éclat aux cheveux normaux à secs. 96 % naturel, sans sulfates, silicones ni colorants. +100 ml gratuit.",
+    "actifs_cles": [
+      "Beurre d'Olive",
+      "Protéine de Soie",
+      "Soie"
+    ],
+    "type_peau": [
+      "Cheveux normaux à secs"
+    ],
+    "prix_tnd": 24.8,
+    "lien_produit": "https://equilibremedical.com/produit/shampoing-reparateur-nourrissant-cheveux-normaux-a-secs/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1495",
+    "nom": "Après shampoing réparateur Tous types de cheveux",
+    "categorie": "Soin capillaire",
+    "sous_categorie": "Réparation et Nutrition",
+    "toutes_categories": [
+      "Soin capillaire > Réparation et Nutrition",
+      "Soin capillaire"
+    ],
+    "description_courte": "Après-shampoing réparateur au Beurre d’Olive et Protéine de Soie. Nourrit intensément, répare les cheveux fragilisés et facilite le démêlage. 96 % d’ingrédients naturels, sans sulfates, silicones ni colorants. Convient à tous types de cheveux.",
+    "actifs_cles": [
+      "Acide Hyaluronique",
+      "Beurre d'Olive",
+      "Protéine de Soie",
+      "Vitamine B3",
+      "Soie"
+    ],
+    "type_peau": [
+      "Tous types de cheveux"
+    ],
+    "prix_tnd": 26.4,
+    "lien_produit": "https://equilibremedical.com/produit/apres-shampoing-reparateur/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1497",
+    "nom": "Crème de soin capillaire",
+    "categorie": "Soin capillaire",
+    "sous_categorie": "Réparation et Nutrition",
+    "toutes_categories": [
+      "Soin capillaire > Réparation et Nutrition",
+      "Soin capillaire"
+    ],
+    "description_courte": "Crème de soin capillaire réparatrice au Beurre d’Olive et Protéine de Soie. Nourrit, protège et sublime les cheveux sans rinçage. Répare la fibre, apporte douceur, brillance et vitalité. Formule naturelle sans sulfates, silicones ni colorants. Tous types de cheveux.",
+    "actifs_cles": [
+      "Acide Hyaluronique",
+      "Beurre d'Olive",
+      "Protéine de Soie",
+      "Soie"
+    ],
+    "type_peau": [
+      "Tous types de cheveux"
+    ],
+    "prix_tnd": 28.8,
+    "lien_produit": "https://equilibremedical.com/produit/creme-de-soin-capillaire/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1499",
+    "nom": "Masque SOS pointes",
+    "categorie": "Soin capillaire",
+    "sous_categorie": "Réparation et Nutrition",
+    "toutes_categories": [
+      "Soin capillaire > Réparation et Nutrition",
+      "Soin capillaire"
+    ],
+    "description_courte": "Masque Chantilly SOS Pointes réparateur et nourrissant. Enrichi en Beurre d’Olive, Protéine de Soie et huiles précieuses (Argan, Coco, Ricin, Sésame). Répare, lisse les cuticules et renforce les cheveux abîmés. 98 % naturel, sans sulfates, silicones ni paraben. Tous types de cheveux.",
+    "actifs_cles": [
+      "Beurre d'Olive",
+      "Protéine de Soie",
+      "Soie"
+    ],
+    "type_peau": [
+      "Tous types de cheveux"
+    ],
+    "prix_tnd": 26.4,
+    "lien_produit": "https://equilibremedical.com/produit/masque-sos-pointes/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1501",
+    "nom": "Hair Repair cheveux abîmés",
+    "categorie": "Soin capillaire",
+    "sous_categorie": "Packs et Routines",
+    "toutes_categories": [
+      "Soin capillaire > Packs et Routines",
+      "Soin capillaire > Réparation et Nutrition",
+      "Soin capillaire"
+    ],
+    "description_courte": "Pack Hair Repair complet : Shampoing, Après-Shampoing, Crème de Soin et Masque SOS Pointes. Formules naturelles au Beurre d’Olive et Protéine de Soie. Répare, nourrit et redonne éclat, douceur et résistance aux cheveux abîmés. 0% sulfates, silicones, colorants. Routine complète tous types de cheveux.",
+    "actifs_cles": [
+      "Beurre d'Olive",
+      "Protéine de Soie",
+      "Soie"
+    ],
+    "type_peau": [
+      "Tous types de cheveux"
+    ],
+    "prix_tnd": 93.1,
+    "lien_produit": "https://equilibremedical.com/produit/hair-repair-cheveux-abimes/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1504",
+    "nom": "Hair Growth anti-chute",
+    "categorie": "Soin capillaire",
+    "sous_categorie": "Anti-chute et Repousse",
+    "toutes_categories": [
+      "Soin capillaire > Anti-chute et Repousse",
+      "Soin capillaire > Packs et Routines",
+      "Soin capillaire"
+    ],
+    "description_courte": "Pack Hair Growth Anti-Chute : routine complète pour freiner la chute, stimuler la repousse et renforcer les fibres capillaires. Composé du shampoing anti-chute, de la lotion repousse et du bain d’huiles fortifiant. Formules naturelles à l’extrait de feuilles d’olive, biotine, huiles végétales et essentielles. Idéal pour redonner densité et vitalité à tous types de cheveux.",
+    "actifs_cles": [
+      "Biotine",
+      "Ortie"
+    ],
+    "type_peau": [
+      "Tous types de cheveux"
+    ],
+    "prix_tnd": 76.5,
+    "lien_produit": "https://equilibremedical.com/produit/hair-growth-anti-chute/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1506",
+    "nom": "Bain d'huiles repousse cheveux",
+    "categorie": "Soin capillaire",
+    "sous_categorie": "Anti-chute et Repousse",
+    "toutes_categories": [
+      "Soin capillaire > Anti-chute et Repousse",
+      "Soin capillaire"
+    ],
+    "description_courte": "Bain d’huiles 100 % naturel pour freiner la chute et stimuler la repousse. Formulé avec des huiles végétales précieuses (Ricin, Moutarde, Cresson, Amla, Ortie, Lentisque, Argan, Sésame) et des huiles essentielles stimulantes. Nourrit, renforce et revitalise tous types de cheveux.",
+    "actifs_cles": [
+      "Ortie"
+    ],
+    "type_peau": [
+      "Tous types de cheveux"
+    ],
+    "prix_tnd": 30.6,
+    "lien_produit": "https://equilibremedical.com/produit/bain-dhuiles-repousse-cheveux/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1508",
+    "nom": "Shampoing anti chute et fortifiant cheveux mixtes à gras",
+    "categorie": "Soin capillaire",
+    "sous_categorie": "Anti-chute et Repousse",
+    "toutes_categories": [
+      "Soin capillaire > Anti-chute et Repousse",
+      "Soin capillaire"
+    ],
+    "description_courte": "Shampoing crème anti-chute fortifiant pour cheveux mixtes à gras. Enrichi en extrait de feuilles d’olive, biotine, niacinamide et actifs purifiants. Limite la chute, stimule la repousse et rééquilibre le cuir chevelu. 96 % d’ingrédients d’origine naturelle, sans sulfates, sans silicones, sans colorants. +100 ml gratuit.",
+    "actifs_cles": [
+      "Biotine",
+      "AHA",
+      "Ortie"
+    ],
+    "type_peau": [
+      "Cheveux/peau mixte à grasse"
+    ],
+    "prix_tnd": 27.0,
+    "lien_produit": "https://equilibremedical.com/produit/shampoing-anti-chute-et-fortifiant-cheveux-mixtes-a-gras/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1511",
+    "nom": "Shampoing anti chute et fortifiant cheveux normaux à secs",
+    "categorie": "Soin capillaire",
+    "sous_categorie": "Anti-chute et Repousse",
+    "toutes_categories": [
+      "Soin capillaire > Anti-chute et Repousse",
+      "Soin capillaire"
+    ],
+    "description_courte": "Shampoing crème anti-chute fortifiant à l’extrait de feuilles d’olive et à la biotine. Stimule la repousse, renforce la fibre capillaire et redonne densité. 96 % d’ingrédients naturels, sans sulfates, sans silicones, sans colorants. Convient aux cheveux normaux à secs.",
+    "actifs_cles": [
+      "Biotine",
+      "Peptides",
+      "AHA",
+      "Ortie"
+    ],
+    "type_peau": [
+      "Cheveux normaux à secs"
+    ],
+    "prix_tnd": 27.0,
+    "lien_produit": "https://equilibremedical.com/produit/shampoing-anti-chute-et-fortifiant-cheveux-normaux-a-secs/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1513",
+    "nom": "Lotion repousse cheveux tous types de cheveux",
+    "categorie": "Soin capillaire",
+    "sous_categorie": "Anti-chute et Repousse",
+    "toutes_categories": [
+      "Soin capillaire > Anti-chute et Repousse",
+      "Soin capillaire"
+    ],
+    "description_courte": "Lotion repousse cheveux naturelle à base d’extrait de feuilles d’olivier et de biotine. Stimule la croissance, renforce la fibre et équilibre le cuir chevelu. 98 % d’ingrédients naturels, sans alcool, sans parabens, sans silicones. Convient à tous types de cheveux.",
+    "actifs_cles": [
+      "Acide Hyaluronique",
+      "Biotine",
+      "Peptides",
+      "Ortie"
+    ],
+    "type_peau": [
+      "Tous types de cheveux"
+    ],
+    "prix_tnd": 31.2,
+    "lien_produit": "https://equilibremedical.com/produit/lotion-repousse-cheveux/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1536",
+    "nom": "Baume réparateur nourrissant",
+    "categorie": "Soin du corps",
+    "sous_categorie": "Pieds et Talons",
+    "toutes_categories": [
+      "Soin du corps > Pieds et Talons",
+      "Soin du corps"
+    ],
+    "description_courte": "Baume pieds réparateur et nourrissant 99 % naturel. Idéal pour pieds très secs et talons fendillés. Hydratation longue durée jusqu’à 24h. Formule vegan.",
+    "actifs_cles": [],
+    "type_peau": [],
+    "prix_tnd": 31.0,
+    "lien_produit": "https://equilibremedical.com/produit/baume-reparateur-nourrissant/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1540",
+    "nom": "Crème Mains Miel et Confort.",
+    "categorie": "Soin du corps",
+    "sous_categorie": "Mains et Ongles",
+    "toutes_categories": [
+      "Soin du corps > Mains et Ongles",
+      "Soin du corps"
+    ],
+    "description_courte": "Crème Mains et Ongles Miel : nutrition intense au miel naturel et beurre de karité bio. Répare, protège et hydrate les mains sèches sans effet gras. Soin quotidien pour mains, ongles et cuticules.",
+    "actifs_cles": [
+      "Acide Hyaluronique",
+      "Miel",
+      "Thé vert"
+    ],
+    "type_peau": [],
+    "prix_tnd": 14.3,
+    "lien_produit": "https://equilibremedical.com/produit/creme-mains-miel-confort/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1542",
+    "nom": "Déodorant naturel apaisant",
+    "categorie": "Soin du corps",
+    "sous_categorie": "Déodorants Naturels",
+    "toutes_categories": [
+      "Soin du corps > Déodorants Naturels",
+      "Soin du corps"
+    ],
+    "description_courte": "Déodorant naturel apaisant 99,4 % d’origine naturelle. Sans aluminium, sans alcool, sans parabènes. Neutralise les odeurs et apaise les aisselles sensibles. Confort longue durée.",
+    "actifs_cles": [],
+    "type_peau": [
+      "Peau sensible",
+      "Toutes peaux"
+    ],
+    "prix_tnd": 17.1,
+    "lien_produit": "https://equilibremedical.com/produit/deodorant-naturel-apaisant/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1544",
+    "nom": "Déodorant naturel éclaircissant",
+    "categorie": "Soin du corps",
+    "sous_categorie": "Déodorants Naturels",
+    "toutes_categories": [
+      "Soin du corps > Déodorants Naturels",
+      "Soin du corps"
+    ],
+    "description_courte": "Déodorant naturel éclaircissant 99,4 % d'origine naturelle. Sans aluminium, sans alcool, sans parabènes. Neutralise les odeurs, illumine et apaise les aisselles. Convient à tous types de peaux.",
+    "actifs_cles": [],
+    "type_peau": [
+      "Toutes peaux"
+    ],
+    "prix_tnd": 17.1,
+    "lien_produit": "https://equilibremedical.com/produit/deodorant-naturel-eclaircissant/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1552",
+    "nom": "Pack vitamine et caféine Tous types de peaux",
+    "categorie": "Soin visage",
+    "sous_categorie": "Gamme Vitamine C et Caféine",
+    "toutes_categories": [
+      "Soin visage > Gamme Vitamine C et Caféine",
+      "Soin visage"
+    ],
+    "description_courte": "Pack complet Vitamine C + Caféine : Mousse Nettoyante, Sérum 10% Vitamine C et Crème Hydratante. Routine éclat, anti-fatigue et anti-taches pour tous types de peaux. Idéal pour un teint lumineux, uniforme et revitalisé.",
+    "actifs_cles": [
+      "Vitamine C",
+      "Caféine"
+    ],
+    "type_peau": [
+      "Toutes peaux"
+    ],
+    "prix_tnd": 114.1,
+    "lien_produit": "https://equilibremedical.com/produit/pack-vitamine-et-cafeine-tous-types-de-peaux/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1554",
+    "nom": "crème solaire peaux mixtes à grasses",
+    "categorie": "Soin visage",
+    "sous_categorie": "Crème Solaire",
+    "toutes_categories": [
+      "Soin visage > Crème Solaire",
+      "Soin visage"
+    ],
+    "description_courte": "Écran solaire minéral invisible pour peaux mixtes à grasses. Haute protection SPF 50+, action antioxydante et fini non gras. Idéal pour un usage quotidien.",
+    "actifs_cles": [
+      "Filtres minéraux",
+      "SPF 50+"
+    ],
+    "type_peau": [
+      "Peau mixte à grasse"
+    ],
+    "prix_tnd": 51.5,
+    "lien_produit": "https://equilibremedical.com/produit/creme-solaire-peaux-mixtes-a-seches/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1556",
+    "nom": "Crème solaire peaux normales à sèches",
+    "categorie": "Soin visage",
+    "sous_categorie": "Crème Solaire",
+    "toutes_categories": [
+      "Soin visage > Crème Solaire",
+      "Soin visage"
+    ],
+    "description_courte": "Crème solaire minérale invisible SPF 50+ : haute protection UVA/UVB, filtre minéral 100% d’origine naturelle, sans parfum et résistante à l’eau. Enrichie en caféine et vitamine E pour une action antioxydante. Idéale peaux normales à sèches.",
+    "actifs_cles": [
+      "Caféine",
+      "Acide Hyaluronique"
+    ],
+    "type_peau": [
+      "Peau normale à sèche"
+    ],
+    "prix_tnd": 51.5,
+    "lien_produit": "https://equilibremedical.com/produit/creme-solaire-peaux-normales-a-seches/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1561",
+    "nom": "Crème visage vitamine C et Caféine",
+    "categorie": "Soin visage",
+    "sous_categorie": "Gamme Vitamine C et Caféine",
+    "toutes_categories": [
+      "Soin visage > Gamme Vitamine C et Caféine",
+      "Soin visage"
+    ],
+    "description_courte": "Crème hydratante visage à la Vitamine C et Caféine. Illumine, hydrate, unifie et raffermit la peau. Réduit l’apparence des taches et des ridules. Convient à tous types de peaux.",
+    "actifs_cles": [
+      "Vitamine C",
+      "Caféine"
+    ],
+    "type_peau": [
+      "Toutes peaux"
+    ],
+    "prix_tnd": 40.0,
+    "lien_produit": "https://equilibremedical.com/produit/creme-visage-vitamine-c-et-cafeine/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1563",
+    "nom": "Mousse nettoyante Vitamine C et Caféine",
+    "categorie": "Soin visage",
+    "sous_categorie": "Gamme Vitamine C et Caféine",
+    "toutes_categories": [
+      "Soin visage > Gamme Vitamine C et Caféine",
+      "Soin visage"
+    ],
+    "description_courte": "Mousse nettoyante douce enrichie en Vitamine C et Caféine. Purifie, illumine et tonifie la peau tout en respectant l’équilibre cutané. 0 % sulfates, 0 % silicone. Tous types de peaux.",
+    "actifs_cles": [
+      "Vitamine C",
+      "Caféine",
+      "Acide Hyaluronique",
+      "AHA"
+    ],
+    "type_peau": [
+      "Toutes peaux"
+    ],
+    "prix_tnd": 26.4,
+    "lien_produit": "https://equilibremedical.com/produit/mousse-nettoyante-vitamine-c-et-cafeine/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1565",
+    "nom": "Sérum visage vitamine C et caféine",
+    "categorie": "Soin visage",
+    "sous_categorie": "Gamme Vitamine C et Caféine",
+    "toutes_categories": [
+      "Soin visage > Gamme Vitamine C et Caféine",
+      "Soin visage"
+    ],
+    "description_courte": "Sérum visage concentré en Vitamine C 10% et Caféine. Illumine, unifie le teint et réduit les signes de fatigue. Texture légère, absorption rapide. 0 % sulfates, 0 % silicone. Tous types de peaux.",
+    "actifs_cles": [
+      "Vitamine C",
+      "Caféine"
+    ],
+    "type_peau": [
+      "Toutes peaux"
+    ],
+    "prix_tnd": 64.0,
+    "lien_produit": "https://equilibremedical.com/produit/serum-visage-vitamine-c-et-cafeine/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1816",
+    "nom": "Pack Adolescent – Peau Mixte à Grasse",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack Adolescent – Peau Mixte à Grasse spécialement formulé pour purifier, rééquilibrer et protéger la peau. Il associe une mousse nettoyante à la vitamine C, des masques ciblés (anti-cernes, anti-taches, anti-pollution) et une crème solaire invisible SPF 50+ pour une routine complète adaptée aux peaux jeunes.",
+    "actifs_cles": [
+      "Vitamine C"
+    ],
+    "type_peau": [
+      "Peau mixte à grasse",
+      "Cheveux/peau mixte à grasse"
+    ],
+    "prix_tnd": 93.1,
+    "lien_produit": "https://equilibremedical.com/produit/pack-adolescent-peau-mixte-a-grasse/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1818",
+    "nom": "Pack Anti-Taches Éclat",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack Anti-Taches Éclat conçu pour unifier le teint, atténuer les taches pigmentaires et raviver l’éclat de la peau. Cette routine complète associe des soins à la Vitamine C , une crème visage illuminatrice , des patchs anti-cernes et un masque sérum anti-taches pour une action ciblée et progressive. Convient à tous types de peaux.",
+    "actifs_cles": [
+      "Vitamine C"
+    ],
+    "type_peau": [
+      "Toutes peaux"
+    ],
+    "prix_tnd": 133.7,
+    "lien_produit": "https://equilibremedical.com/produit/pack-anti-taches-eclat/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1820",
+    "nom": "Pack Déodorants Duo",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack promotionnel Équilibre Médical combinant plusieurs produits de la gamme Slow Beauty. Composition exacte non documentée sur le site — à confirmer par l'équipe avant utilisation par le chatbot.",
+    "actifs_cles": [],
+    "type_peau": [],
+    "prix_tnd": 26.6,
+    "lien_produit": "https://equilibremedical.com/produit/pack-deodorants-duo/",
+    "en_stock": true,
+    "besoin_verification_description": true
+  },
+  {
+    "id": "1822",
+    "nom": "Pack Éclat du Matin",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack Éclat du Matin : la routine visage complète pour nettoyer, illuminer, hydrater et protéger la peau au quotidien. Grâce à l’association Vitamine C + Caféine et à une protection solaire minérale SPF 50+ , le teint paraît plus frais, lumineux et visiblement revitalisé. Convient à tous types de peaux. Routine complète : nettoyage + sérum + crème + SPF 50+ Teint plus lumineux et peau plus lisse Hydratation et confort au quotidien Protection UVA/UVB avec filtre minéral Convient à tous types de peaux",
+    "actifs_cles": [
+      "Vitamine C",
+      "Caféine",
+      "Acide Hyaluronique"
+    ],
+    "type_peau": [
+      "Toutes peaux"
+    ],
+    "prix_tnd": 154.0,
+    "lien_produit": "https://equilibremedical.com/produit/pack-eclat-du-matin/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1824",
+    "nom": "Pack Homme Essentiel",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack Homme Essentiel : une routine complète visage et corps pensée pour les besoins quotidiens de l’homme. Il associe des soins visage à la Vitamine C pour nettoyer, hydrater et revitaliser la peau, ainsi que des essentiels corps pour le confort, l’hygiène et la protection au quotidien.",
+    "actifs_cles": [
+      "Vitamine C",
+      "Miel"
+    ],
+    "type_peau": [
+      "Toutes peaux"
+    ],
+    "prix_tnd": 164.5,
+    "lien_produit": "https://equilibremedical.com/produit/pack-homme-essentiel/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1826",
+    "nom": "Pack Jeunesse Détox",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack Jeunesse Détox conçu pour purifier la peau, raviver l’éclat du teint et prévenir les premiers signes de l’âge. Cette routine associe des soins à la Vitamine C , un patch anti-âge et un masque sérum anti-âge pour une peau plus fraîche, lisse et visiblement revitalisée.",
+    "actifs_cles": [
+      "Vitamine C"
+    ],
+    "type_peau": [
+      "Toutes peaux"
+    ],
+    "prix_tnd": 93.1,
+    "lien_produit": "https://equilibremedical.com/produit/pack-jeunesse-detox/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "1828",
+    "nom": "Pack Masques Soin Hebdomadaire",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack promotionnel Équilibre Médical combinant plusieurs produits de la gamme Slow Beauty. Composition exacte non documentée sur le site — à confirmer par l'équipe avant utilisation par le chatbot.",
+    "actifs_cles": [],
+    "type_peau": [],
+    "prix_tnd": 40.6,
+    "lien_produit": "https://equilibremedical.com/produit/pack-masques-soin-hebdomadaire/",
+    "en_stock": true,
+    "besoin_verification_description": true
+  },
+  {
+    "id": "1830",
+    "nom": "Pack Peau Sensible & Sèche – Solaire & Confort",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack promotionnel Équilibre Médical combinant plusieurs produits de la gamme Slow Beauty. Composition exacte non documentée sur le site — à confirmer par l'équipe avant utilisation par le chatbot.",
+    "actifs_cles": [],
+    "type_peau": [
+      "Peau sensible"
+    ],
+    "prix_tnd": 123.9,
+    "lien_produit": "https://equilibremedical.com/produit/pack-peau-sensible-seche-solaire-confort/",
+    "en_stock": true,
+    "besoin_verification_description": true
+  },
+  {
+    "id": "1832",
+    "nom": "Pack Premium Éclat Absolu – Rituel Visage Complet",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack promotionnel Équilibre Médical combinant plusieurs produits de la gamme Slow Beauty. Composition exacte non documentée sur le site — à confirmer par l'équipe avant utilisation par le chatbot.",
+    "actifs_cles": [],
+    "type_peau": [],
+    "prix_tnd": 142.8,
+    "lien_produit": "https://equilibremedical.com/produit/pack-premium-eclat-absolu-rituel-visage-complet/",
+    "en_stock": true,
+    "besoin_verification_description": true
+  },
+  {
+    "id": "1834",
+    "nom": "Pack Premium Régénération Intense – Nuit & Réparation",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack promotionnel Équilibre Médical combinant plusieurs produits de la gamme Slow Beauty. Composition exacte non documentée sur le site — à confirmer par l'équipe avant utilisation par le chatbot.",
+    "actifs_cles": [],
+    "type_peau": [],
+    "prix_tnd": 181.3,
+    "lien_produit": "https://equilibremedical.com/produit/pack-premium-regeneration-intense-nuit-reparation/",
+    "en_stock": true,
+    "besoin_verification_description": true
+  },
+  {
+    "id": "1836",
+    "nom": "Pack Pureté Détox",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack promotionnel Équilibre Médical combinant plusieurs produits de la gamme Slow Beauty. Composition exacte non documentée sur le site — à confirmer par l'équipe avant utilisation par le chatbot.",
+    "actifs_cles": [],
+    "type_peau": [],
+    "prix_tnd": 64.4,
+    "lien_produit": "https://equilibremedical.com/produit/pack-purete-detox/",
+    "en_stock": true,
+    "besoin_verification_description": true
+  },
+  {
+    "id": "1838",
+    "nom": "Pack Régénération Nocturne",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack promotionnel Équilibre Médical combinant plusieurs produits de la gamme Slow Beauty. Composition exacte non documentée sur le site — à confirmer par l'équipe avant utilisation par le chatbot.",
+    "actifs_cles": [],
+    "type_peau": [],
+    "prix_tnd": 118.3,
+    "lien_produit": "https://equilibremedical.com/produit/pack-regeneration-nocturne/",
+    "en_stock": true,
+    "besoin_verification_description": true
+  },
+  {
+    "id": "1840",
+    "nom": "Pack Spa à la Maison",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack promotionnel Équilibre Médical combinant plusieurs produits de la gamme Slow Beauty. Composition exacte non documentée sur le site — à confirmer par l'équipe avant utilisation par le chatbot.",
+    "actifs_cles": [],
+    "type_peau": [],
+    "prix_tnd": 93.1,
+    "lien_produit": "https://equilibremedical.com/produit/pack-spa-a-la-maison/",
+    "en_stock": true,
+    "besoin_verification_description": true
+  },
+  {
+    "id": "2076",
+    "nom": "Masque Sérum Anti-taches Thé vert et AHA",
+    "categorie": "Soin visage",
+    "sous_categorie": "Masque sérum",
+    "toutes_categories": [
+      "Soin visage > Masque sérum > Anti-taches",
+      "Soin visage > Masque sérum",
+      "Soin visage"
+    ],
+    "description_courte": "Masque sérum exfoliant et unifiant au Thé vert et AHA, pour atténuer les taches et unifier le teint.",
+    "actifs_cles": [
+      "Thé vert",
+      "AHA"
+    ],
+    "type_peau": [
+      "Taches pigmentaires",
+      "Teint irrégulier"
+    ],
+    "prix_tnd": 10.0,
+    "lien_produit": "https://equilibremedical.com/produit/masque-serum-anti-taches/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "2078",
+    "nom": "Masque Sérum Anti-rides Soie et Peptides",
+    "categorie": "Soin visage",
+    "sous_categorie": "Masque sérum",
+    "toutes_categories": [
+      "Soin visage > Masque sérum > Anti-rides",
+      "Soin visage > Masque sérum",
+      "Soin visage"
+    ],
+    "description_courte": "Masque sérum à la Soie et aux Peptides, pour lisser et raffermir la peau.",
+    "actifs_cles": [
+      "Soie",
+      "Peptides"
+    ],
+    "type_peau": [
+      "Peau relâchée",
+      "Rides"
+    ],
+    "prix_tnd": 10.0,
+    "lien_produit": "https://equilibremedical.com/produit/masque-serum-anti-rides-soie-et-peptides/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "2080",
+    "nom": "Masque Sérum Anti-age Grenade et Safran",
+    "categorie": "Soin visage",
+    "sous_categorie": "Masque sérum",
+    "toutes_categories": [
+      "Soin visage > Masque sérum > Anti-age",
+      "Soin visage > Masque sérum",
+      "Soin visage"
+    ],
+    "description_courte": "Masque sérum à la Grenade et au Safran, pour repulper et hydrater la peau en profondeur.",
+    "actifs_cles": [
+      "Grenade",
+      "Safran"
+    ],
+    "type_peau": [
+      "Peau mature",
+      "Anti-âge"
+    ],
+    "prix_tnd": 10.0,
+    "lien_produit": "https://equilibremedical.com/produit/masque-serum-anti-age-grenade-et-safran/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "2082",
+    "nom": "Masque Sérum visage Anti rougeur Miel, Beurre d'olive et acide hyaluronique",
+    "categorie": "Soin visage",
+    "sous_categorie": "Masque sérum",
+    "toutes_categories": [
+      "Soin visage > Masque sérum > Anti rougeur",
+      "Soin visage > Masque sérum",
+      "Soin visage"
+    ],
+    "description_courte": "Masque tissu anti-rougeurs au Miel, Beurre d’Olive et Acide Hyaluronique. Apaise, hydrate et réduit les irritations. Convient aux peaux sensibles. Formule naturelle.",
+    "actifs_cles": [
+      "Acide Hyaluronique",
+      "Beurre d'Olive",
+      "Miel"
+    ],
+    "type_peau": [
+      "Peau sensible"
+    ],
+    "prix_tnd": 10.0,
+    "lien_produit": "https://equilibremedical.com/produit/masque-serum-visage-anti-rougeur-miel-beurre-dolive-et-acide-hyaluronique/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "2084",
+    "nom": "Masque Sérum Anti-pollution Charbon Végétal",
+    "categorie": "Soin visage",
+    "sous_categorie": "Masque sérum",
+    "toutes_categories": [
+      "Soin visage > Masque sérum > Anti-pollution",
+      "Soin visage > Masque sérum",
+      "Soin visage"
+    ],
+    "description_courte": "Sérum masque visage anti-pollution au charbon végétal et acide hyaluronique. Détoxifie en profondeur, resserre visiblement les pores et hydrate intensément. Formule naturelle, sans parabène, tous types de peaux même sensibles.",
+    "actifs_cles": [
+      "Acide Hyaluronique",
+      "Charbon Végétal"
+    ],
+    "type_peau": [
+      "Peau mixte à grasse",
+      "Cheveux/peau mixte à grasse",
+      "Toutes peaux"
+    ],
+    "prix_tnd": 10.0,
+    "lien_produit": "https://equilibremedical.com/produit/masque-serum-anti-pollution-charbon-vegetal/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "2086",
+    "nom": "Masque Sérum Anti Fatigue Vitamine C et Caféine",
+    "categorie": "Soin visage",
+    "sous_categorie": "Masque sérum",
+    "toutes_categories": [
+      "Soin visage > Masque sérum > Anti fatigue",
+      "Soin visage > Masque sérum",
+      "Soin visage"
+    ],
+    "description_courte": "Masque sérum intensif à la Vitamine C et Caféine pour effacer les signes de fatigue, hydrater et redonner de l'éclat au teint.",
+    "actifs_cles": [
+      "Vitamine C",
+      "Caféine"
+    ],
+    "type_peau": [
+      "Teint terne",
+      "Peau fatiguée"
+    ],
+    "prix_tnd": 10.0,
+    "lien_produit": "https://equilibremedical.com/produit/masque-serum-anti-fatigue-vitamine-c-et-cafeine/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "2088",
+    "nom": "Patch Anti-cernes Vitamine C & Caféine",
+    "categorie": "Soin visage",
+    "sous_categorie": "Patchs masque",
+    "toutes_categories": [
+      "Soin visage > Patchs masque > Anti-cernes",
+      "Soin visage > Patchs masque",
+      "Soin visage"
+    ],
+    "description_courte": "Patch masque à la Vitamine C et Caféine pour nourrir et éclaircir le contour des yeux, cible les cernes.",
+    "actifs_cles": [
+      "Vitamine C",
+      "Caféine"
+    ],
+    "type_peau": [
+      "Cernes"
+    ],
+    "prix_tnd": 13.0,
+    "lien_produit": "https://equilibremedical.com/produit/patch-anti-cernes-vitamine-c-cafeine/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "2090",
+    "nom": "Patch Anti-âge Grenade & Safran",
+    "categorie": "Soin visage",
+    "sous_categorie": "Patchs masque",
+    "toutes_categories": [
+      "Soin visage > Patchs masque > Anti-âge",
+      "Soin visage > Patchs masque",
+      "Soin visage"
+    ],
+    "description_courte": "Patchs Masque Anti-Âge Grenade & Safran – Soin contour des yeux naturel à l’action hydratante et repulpante. Enrichis en grenade, safran et acide hyaluronique, ils aident à lisser les ridules, réduire les signes de fatigue et illuminer le regard. Convient à tous types de peaux.",
+    "actifs_cles": [
+      "Acide Hyaluronique",
+      "Grenade",
+      "Safran",
+      "Thé vert"
+    ],
+    "type_peau": [
+      "Toutes peaux"
+    ],
+    "prix_tnd": 13.0,
+    "lien_produit": "https://equilibremedical.com/produit/patch-anti-age-grenade-safran/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "2495",
+    "nom": "Pack Hydratation Douceur",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "🧴 Crème mains nourrissante 🦶 Baume pieds réparateur ☀️ Écran solaire minéral SPF 50+",
+    "actifs_cles": [],
+    "type_peau": [],
+    "prix_tnd": 77.0,
+    "lien_produit": "https://equilibremedical.com/produit/pack-hydratation-douceur/",
+    "en_stock": true,
+    "besoin_verification_description": false
+  },
+  {
+    "id": "2755",
+    "nom": "pack 15 patchs",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack personnalisable : le client compose lui-même sa sélection parmi les produits Équilibre Médical disponibles (pack 15 patchs).",
+    "actifs_cles": [],
+    "type_peau": [],
+    "prix_tnd": 30.0,
+    "lien_produit": "https://equilibremedical.com/produit/pack-15-patchs/",
+    "en_stock": true,
+    "besoin_verification_description": true,
+    "type_pack": "composable"
+  },
+  {
+    "id": "2766",
+    "nom": "pack de 6 sérum masque visage",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack personnalisable : le client compose lui-même sa sélection parmi les produits Équilibre Médical disponibles (pack de 6 sérum masque visage).",
+    "actifs_cles": [
+      "Vitamine C",
+      "Caféine",
+      "Acide Hyaluronique",
+      "Charbon Végétal",
+      "Miel",
+      "Grenade",
+      "Safran",
+      "Peptides",
+      "Thé vert",
+      "AHA",
+      "Soie"
+    ],
+    "type_peau": [],
+    "prix_tnd": 43.0,
+    "lien_produit": "https://equilibremedical.com/produit/pack-de-6-serum-masque-visage/",
+    "en_stock": true,
+    "besoin_verification_description": true,
+    "type_pack": "composable"
+  },
+  {
+    "id": "2784",
+    "nom": "3 éme gratuit",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack personnalisable : le client compose lui-même sa sélection parmi les produits Équilibre Médical disponibles (3 éme gratuit).",
+    "actifs_cles": [],
+    "type_peau": [],
+    "prix_tnd": 25.0,
+    "lien_produit": "https://equilibremedical.com/produit/3-eme-gratuit/",
+    "en_stock": true,
+    "besoin_verification_description": true,
+    "type_pack": "composable"
+  },
+  {
+    "id": "2803",
+    "nom": "Pack Summer Essentials",
+    "categorie": "Packs soins",
+    "sous_categorie": "",
+    "toutes_categories": [
+      "Packs soins"
+    ],
+    "description_courte": "Pack promotionnel Équilibre Médical combinant plusieurs produits de la gamme Slow Beauty. Composition exacte non documentée sur le site — à confirmer par l'équipe avant utilisation par le chatbot.",
+    "actifs_cles": [],
+    "type_peau": [],
+    "prix_tnd": 136.5,
+    "lien_produit": "https://equilibremedical.com/produit/pack-summer-essentials/",
+    "en_stock": true,
+    "besoin_verification_description": true
+  }
+]
