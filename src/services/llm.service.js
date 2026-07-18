@@ -330,7 +330,7 @@ function extractProductReferences(rawText) {
     }
   }
 
-  return { cleanedText, products };
+  return { reply: cleanedText, products };
 }
 
 // Message affiché à l'utilisateur final quand aucun fournisseur n'est
