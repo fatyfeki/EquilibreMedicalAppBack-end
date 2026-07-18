@@ -351,7 +351,10 @@ async function callProvider(client, model, messages, label) {
       // aussi dans le quota tokens/minute de Groq.
       max_tokens: 500,
     }),
-    15000,
+    // Remonté de 15s à 25s : sur le plan gratuit (Groq comme Render), un
+    // pic de charge ponctuel peut dépasser 15s sans que le service soit
+    // pour autant en panne. On laisse une vraie marge avant de basculer.
+    25000,
     label,
   );
 
