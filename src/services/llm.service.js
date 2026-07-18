@@ -249,9 +249,13 @@ ${detailsBlock}
    de fiche détaillée ici, dis que tu n'as pas plus de précisions sous
    la main et renvoie vers sa fiche produit dans l'app (dont tu as le
    lien dans l'INDEX) plutôt que d'inventer.
-3. **Cite le lien** : Quand tu recommandes un produit, inclus toujours
-   son lien exact (format Markdown), ex:
-   [Sérum Vitamine C & Caféine](https://equilibremedical.com/produit/...).
+3. **Référence un produit avec un tag** : quand tu recommandes ou cites un
+   produit précis du catalogue, ajoute juste après son nom le tag exact
+   [[PRODUIT:id]] (avec le vrai id numérique de l'INDEX), par exemple :
+   "Je vous recommande notre Sérum Vitamine C & Caféine [[PRODUIT:1565]]."
+   N'écris JAMAIS l'URL toi-même, n'utilise JAMAIS de lien Markdown
+   [texte](url) : uniquement ce tag [[PRODUIT:id]], une carte produit
+   cliquable sera affichée automatiquement à sa place dans l'app.
 4. **Prix** : Utilise UNIQUEMENT le prix indiqué dans les DÉTAILS. S'il
    est marqué "prix non communiqué", dis que le prix exact est visible
    sur la fiche produit dans l'app, sans donner de chiffre.
@@ -290,6 +294,45 @@ function withTimeout(promise, ms, label) {
   ]);
 }
 
+// Reconnaît les tags [[PRODUIT:id]] que le modèle place après un nom de
+// produit. On les retire du texte affiché et on renvoie à la place une
+// liste structurée, pour que le frontend affiche de vraies cartes
+// produit cliquables plutôt que du texte brut.
+const PRODUCT_TAG_REGEX = /\s*\[\[PRODUIT:([a-zA-Z0-9_-]+)\]\]/g;
+
+function extractProductReferences(rawText) {
+  const foundIds = [];
+  let match;
+  PRODUCT_TAG_REGEX.lastIndex = 0;
+  while ((match = PRODUCT_TAG_REGEX.exec(rawText)) !== null) {
+    foundIds.push(match[1]);
+  }
+
+  const cleanedText = rawText.replace(PRODUCT_TAG_REGEX, "").trim();
+
+  // On déduplique tout en gardant l'ordre d'apparition, et on ne garde
+  // que les ids qui existent réellement dans le catalogue (le modèle
+  // peut se tromper malgré les consignes).
+  const seen = new Set();
+  const products = [];
+  for (const id of foundIds) {
+    if (seen.has(id)) continue;
+    seen.add(id);
+    const product = PRODUITS_EN_STOCK.find((p) => p.id === id);
+    if (product) {
+      products.push({
+        id: product.id,
+        nom: product.nom,
+        prix_tnd: product.prix_tnd ?? null,
+        categorie: product.categorie,
+        lien_produit: product.lien_produit,
+      });
+    }
+  }
+
+  return { cleanedText, products };
+}
+
 // Message affiché à l'utilisateur final quand aucun fournisseur n'est
 // joignable : jamais l'erreur brute.
 const FRIENDLY_UNAVAILABLE_MESSAGE =
@@ -325,7 +368,7 @@ async function callProvider(client, model, messages, label) {
  * sur OpenRouter comme filet de sécurité.
  * @param {{role: "user"|"model", text: string}[]} history
  * @param {string} message
- * @returns {Promise<string>}
+ * @returns {Promise<{reply: string, products: object[]}>}
  */
 async function getChatReply(history, message) {
   const messages = [
@@ -341,7 +384,7 @@ async function getChatReply(history, message) {
       console.log("➡️  Appel Groq (", GROQ_MODEL, ")");
       const text = await callProvider(groqClient, GROQ_MODEL, messages, "Groq");
       console.log("⬅️  Réponse Groq reçue (", text.length, "caractères )");
-      return text;
+      return extractProductReferences(text);
     } catch (err) {
       console.error("⚠️  Groq indisponible, bascule vers OpenRouter :", err.message);
     }
@@ -354,7 +397,7 @@ async function getChatReply(history, message) {
       console.log("➡️  Appel OpenRouter (", OPENROUTER_MODEL, ")");
       const text = await callProvider(openRouterClient, OPENROUTER_MODEL, messages, "OpenRouter");
       console.log("⬅️  Réponse OpenRouter reçue (", text.length, "caractères )");
-      return text;
+      return extractProductReferences(text);
     } catch (err) {
       console.error("⚠️  OpenRouter indisponible aussi :", err.message);
     }
