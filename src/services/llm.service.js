@@ -31,13 +31,30 @@ if (PRODUCTS.length === 0) {
   );
 }
 
-// Transforme le catalogue JSON en un bloc de texte compact, lisible par
-// le modèle, à injecter dans le system prompt. On ne garde que les
-// produits en stock (inutile de proposer une rupture de stock).
-function formatCatalogForPrompt(products) {
-  const enStock = products.filter((p) => p.en_stock !== false);
+const PRODUITS_EN_STOCK = PRODUCTS.filter((p) => p.en_stock !== false);
 
-  return enStock
+// ---------------------------------------------------------------------
+// 1) INDEX léger : toujours envoyé en entier, pour que le bot sache ce
+//    qui existe dans le catalogue même sans les détails complets.
+//    Volontairement compact (1 ligne/produit) pour rester économe en
+//    tokens (contrainte du plan gratuit Groq : 6000-8000 tokens/minute).
+// ---------------------------------------------------------------------
+function buildCatalogIndex(products) {
+  return products
+    .map((p) => `- [${p.id}] ${p.nom} — ${p.categorie} — ${p.lien_produit}`)
+    .join("\n");
+}
+
+const CATALOG_INDEX = buildCatalogIndex(PRODUITS_EN_STOCK);
+
+// ---------------------------------------------------------------------
+// 2) DÉTAILS complets : formatés uniquement pour les produits jugés
+//    pertinents par rapport au message de l'utilisateur (voir
+//    getRelevantProducts). C'est la partie "RAG" : on ne charge que ce
+//    qui est utile à CETTE question, pas tout le catalogue.
+// ---------------------------------------------------------------------
+function formatProductDetails(products) {
+  return products
     .map((p) => {
       const actifs = (p.actifs_cles || []).join(", ") || "N/A";
       const typePeau = (p.type_peau || []).join(", ") || "N/A";
@@ -55,7 +72,66 @@ function formatCatalogForPrompt(products) {
     .join("\n\n");
 }
 
-const CATALOG_BLOCK = formatCatalogForPrompt(PRODUCTS);
+// Mots trop génériques pour servir de critère de recherche.
+const STOPWORDS = new Set([
+  "les", "des", "une", "un", "le", "la", "de", "du", "et", "ou", "pour",
+  "avec", "sans", "sur", "dans", "que", "qui", "quoi", "comment", "est",
+  "ce", "cette", "vous", "votre", "moi", "j'ai", "jai", "mon", "ma", "mes",
+  "quel", "quelle", "quels", "quelles", "bonjour", "svp", "merci",
+]);
+
+function stripAccents(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function extractKeywords(text) {
+  return stripAccents(text.toLowerCase())
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w.length >= 3 && !STOPWORDS.has(w));
+}
+
+// Sélectionne les produits les plus pertinents pour le message de
+// l'utilisateur, par simple correspondance de mots-clés sur le nom, la
+// catégorie, les actifs, le type de peau et la description. C'est un RAG
+// volontairement simple (pas d'embeddings) : suffisant pour ~50 produits,
+// et surtout ça évite de dépasser les quotas de tokens du plan gratuit.
+function getRelevantProducts(message, products, maxResults = 8) {
+  const keywords = extractKeywords(message);
+  if (keywords.length === 0) return [];
+
+  const scored = products.map((p) => {
+    const haystack = stripAccents(
+      [
+        p.nom,
+        p.categorie,
+        p.sous_categorie,
+        ...(p.actifs_cles || []),
+        ...(p.type_peau || []),
+        p.description_courte,
+      ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase(),
+    );
+
+    let score = 0;
+    for (const kw of keywords) {
+      if (haystack.includes(kw)) score += 1;
+      // Le nom du produit compte double : une correspondance sur le nom
+      // exact est un signal beaucoup plus fort qu'un mot perdu dans la
+      // description.
+      if (stripAccents(p.nom.toLowerCase()).includes(kw)) score += 1;
+    }
+    return { product: p, score };
+  });
+
+  return scored
+    .filter((s) => s.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, maxResults)
+    .map((s) => s.product);
+}
 
 // Groq et OpenRouter exposent tous les deux une API compatible OpenAI :
 // même client, on change juste baseURL + clé.
@@ -75,9 +151,24 @@ const openRouterClient = OPENROUTER_API_KEY
     })
   : null;
 
-// Personnalité / cadrage de l'assistant (inchangé par rapport à la
-// version Gemini, juste porté au format OpenAI "system" message).
-const SYSTEM_INSTRUCTION = `
+// Personnalité / cadrage de l'assistant. La base est fixe, mais le bloc
+// "DÉTAILS PRODUITS PERTINENTS" change à chaque message : on n'y met que
+// les quelques produits liés à la question posée (RAG), pas tout le
+// catalogue, pour rester sous les quotas de tokens/minute.
+function buildSystemInstruction(userMessage) {
+  const relevant = getRelevantProducts(userMessage, PRODUITS_EN_STOCK);
+  const detailsBlock =
+    relevant.length > 0
+      ? formatProductDetails(relevant)
+      : "(Aucun produit du catalogue ne correspond clairement à cette question " +
+        "d'après les mots-clés utilisés. Utilise l'INDEX ci-dessus pour voir ce " +
+        "qui existe, mais ne donne pas de détails que tu ne connais pas : pose " +
+        "une question de clarification, ou oriente vers une catégorie.)";
+
+  return SYSTEM_INSTRUCTION_TEMPLATE(detailsBlock);
+}
+
+const SYSTEM_INSTRUCTION_TEMPLATE = (detailsBlock) => `
 # Identité
 Tu es Dermobot, l'assistant beauté virtuel de l'application mobile
 Équilibre Médical (marque de produits : "Slow Beauty"), une boutique
@@ -157,34 +248,48 @@ botaniques (apaisants).
   donnes pas de posologie ou de diagnostic à sa place.
 - Tu ne recommandes jamais de marques ou produits concurrents.
 
-# CATALOGUE OFFICIEL (source unique de vérité)
-Voici la liste EXHAUSTIVE et EXACTE des produits Équilibre Médical
-actuellement en stock. C'est ta SEULE source pour recommander un
-produit, citer un prix, un actif ou un lien.
+# INDEX DU CATALOGUE (liste EXHAUSTIVE et EXACTE des produits en stock)
+Tu ne dois JAMAIS mentionner ou inventer un produit qui n'est pas dans
+cet index. C'est ta seule source pour savoir ce qui existe :
 
-${CATALOG_BLOCK}
+${CATALOG_INDEX}
+
+# DÉTAILS PRODUITS PERTINENTS pour la question posée
+Pour les produits ci-dessous (sélectionnés car liés à la question de
+l'utilisateur), tu as une fiche complète : description, actifs, type de
+peau, prix, lien. Utilise UNIQUEMENT ces informations pour argumenter en
+détail — ne complète jamais avec des connaissances générales sur les
+cosmétiques.
+
+${detailsBlock}
 
 # Règles absolues liées au catalogue
 1. **Source unique** : Tu ne recommandes JAMAIS un produit qui n'est pas
-   dans la liste ci-dessus. Tu ne dois JAMAIS inventer un nom de produit,
-   un prix, un lien ou un actif qui n'y figure pas.
-2. **Cite le lien** : Quand tu recommandes un produit du catalogue,
-   inclus toujours son lien exact (format Markdown), ex:
+   dans l'INDEX ci-dessus. Tu ne dois JAMAIS inventer un nom de produit,
+   un prix, un actif ou un lien.
+2. **Détails limités** : Tu ne peux donner des détails précis (actifs,
+   prix, description) QUE pour les produits présents dans le bloc
+   "DÉTAILS PRODUITS PERTINENTS". Pour un produit de l'INDEX qui n'a pas
+   de fiche détaillée ici, dis que tu n'as pas plus de précisions sous
+   la main et renvoie vers sa fiche produit dans l'app (dont tu as le
+   lien dans l'INDEX) plutôt que d'inventer.
+3. **Cite le lien** : Quand tu recommandes un produit, inclus toujours
+   son lien exact (format Markdown), ex:
    [Sérum Vitamine C & Caféine](https://equilibremedical.com/produit/...).
-3. **Prix** : Utilise UNIQUEMENT le prix indiqué dans le catalogue. S'il
+4. **Prix** : Utilise UNIQUEMENT le prix indiqué dans les DÉTAILS. S'il
    est marqué "prix non communiqué", dis que le prix exact est visible
    sur la fiche produit dans l'app, sans donner de chiffre.
-4. **Produit absent du catalogue** : Si l'utilisateur demande un produit,
-   un ingrédient ou un besoin qu'aucun produit du catalogue ne couvre,
+5. **Produit absent du catalogue** : Si l'utilisateur demande un produit,
+   un ingrédient ou un besoin qu'aucun produit de l'INDEX ne couvre,
    réponds poliment que ce produit spécifique n'est pas disponible chez
-   Équilibre Médical, puis propose l'alternative la plus proche du
-   catalogue si elle existe. Si vraiment rien ne correspond, dis-le
-   simplement et propose de contacter l'équipe Équilibre Médical.
-5. **Jamais d'invention** : Si le catalogue ne te permet pas de répondre
-   avec certitude, ne complète jamais par tes connaissances générales
-   sur les cosmétiques pour "deviner" un produit — dis que tu ne sais
-   pas.
-`.trim();
+   Équilibre Médical, puis propose l'alternative la plus proche si elle
+   existe. Si vraiment rien ne correspond, dis-le simplement et propose
+   de contacter l'équipe Équilibre Médical.
+6. **Jamais d'invention** : Si tu ne peux pas répondre avec certitude à
+   partir de l'INDEX et des DÉTAILS fournis, ne complète jamais par tes
+   connaissances générales sur les cosmétiques pour "deviner" — dis que
+   tu ne sais pas, ou pose une question de clarification.
+`;
 
 // Le frontend envoie { role: "user" | "model", text }, on convertit
 // vers le format OpenAI { role: "user" | "assistant", content }.
@@ -245,7 +350,7 @@ async function callProvider(client, model, messages, label) {
  */
 async function getChatReply(history, message) {
   const messages = [
-    { role: "system", content: SYSTEM_INSTRUCTION },
+    { role: "system", content: buildSystemInstruction(message) },
     ...formatHistory(history),
     { role: "user", content: message },
   ];
