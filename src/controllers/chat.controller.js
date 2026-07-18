@@ -15,8 +15,8 @@ async function postChat(req, res, next) {
       return res.status(400).json({ error: "Le champ 'history' doit être un tableau." });
     }
 
-    const reply = await getChatReply(history, message);
-    res.json({ reply });
+    const { reply, products } = await getChatReply(history, message);
+    res.json({ reply, products });
   } catch (err) {
     next(err);
   }
