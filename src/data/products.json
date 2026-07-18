@@ -22,7 +22,8 @@
     "prix_tnd": 24.8,
     "lien_produit": "https://equilibremedical.com/produit/shampoing-reparateur-et-nourrissant-cheveux-mixtes-a-gras/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/shampoing-reparateur-nourrissant-cheveux-mixtes-a-gras.webp"
   },
   {
     "id": "1490",
@@ -45,7 +46,8 @@
     "prix_tnd": 24.8,
     "lien_produit": "https://equilibremedical.com/produit/shampoing-reparateur-nourrissant-cheveux-normaux-a-secs/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/shampoing-reparateur-nourrisant-chveux-normaux-a-secs.webp"
   },
   {
     "id": "1495",
@@ -70,7 +72,8 @@
     "prix_tnd": 26.4,
     "lien_produit": "https://equilibremedical.com/produit/apres-shampoing-reparateur/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/apres-shampoing-proteine-de-soie-tous-types-de-cheveux-.webp"
   },
   {
     "id": "1497",
@@ -94,7 +97,8 @@
     "prix_tnd": 28.8,
     "lien_produit": "https://equilibremedical.com/produit/creme-de-soin-capillaire/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/creme-soin-cheveux-repare-protege-proteine-de-soie.webp"
   },
   {
     "id": "1499",
@@ -117,7 +121,8 @@
     "prix_tnd": 26.4,
     "lien_produit": "https://equilibremedical.com/produit/masque-sos-pointes/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/masque-pour-les-pointes-repare-nourrit-tous-types-de-cheveux-.webp"
   },
   {
     "id": "1501",
@@ -141,7 +146,8 @@
     "prix_tnd": 93.1,
     "lien_produit": "https://equilibremedical.com/produit/hair-repair-cheveux-abimes/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/soin-cheveux-naturel-reparateur-Hair-repair-tunisie.webp"
   },
   {
     "id": "1504",
@@ -164,7 +170,8 @@
     "prix_tnd": 76.5,
     "lien_produit": "https://equilibremedical.com/produit/hair-growth-anti-chute/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/Soin-cheveux-naturel-antichute-fortifiant-Hair-Growth-Tunisie.webp"
   },
   {
     "id": "1506",
@@ -185,7 +192,8 @@
     "prix_tnd": 30.6,
     "lien_produit": "https://equilibremedical.com/produit/bain-dhuiles-repousse-cheveux/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/bain-dhuile-repousse-cheveux.webp"
   },
   {
     "id": "1508",
@@ -208,7 +216,8 @@
     "prix_tnd": 27.0,
     "lien_produit": "https://equilibremedical.com/produit/shampoing-anti-chute-et-fortifiant-cheveux-mixtes-a-gras/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/Shampoing-antichute-fortifiant-cheveux-mixtes-a-gras.webp"
   },
   {
     "id": "1511",
@@ -232,7 +241,8 @@
     "prix_tnd": 27.0,
     "lien_produit": "https://equilibremedical.com/produit/shampoing-anti-chute-et-fortifiant-cheveux-normaux-a-secs/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/Shamoing-anti-chute-fortifiant-cheveux-normaux-a-secs.webp"
   },
   {
     "id": "1513",
@@ -256,7 +266,8 @@
     "prix_tnd": 31.2,
     "lien_produit": "https://equilibremedical.com/produit/lotion-repousse-cheveux/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/lotion-capilliare-naturel-reposse-cheveux-tous-types-de-cheveux-.webp"
   },
   {
     "id": "1536",
@@ -273,7 +284,8 @@
     "prix_tnd": 31.0,
     "lien_produit": "https://equilibremedical.com/produit/baume-reparateur-nourrissant/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/Baume-pied-reparateur-nourrissant-tunisie.webp"
   },
   {
     "id": "1540",
@@ -294,7 +306,8 @@
     "prix_tnd": 14.3,
     "lien_produit": "https://equilibremedical.com/produit/creme-mains-miel-confort/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/creme-mains-ongles-beurre-de-karite-tunisie.webp"
   },
   {
     "id": "1542",
@@ -314,7 +327,8 @@
     "prix_tnd": 17.1,
     "lien_produit": "https://equilibremedical.com/produit/deodorant-naturel-apaisant/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/Deodorant-naturel-apaisant.webp"
   },
   {
     "id": "1544",
@@ -333,7 +347,8 @@
     "prix_tnd": 17.1,
     "lien_produit": "https://equilibremedical.com/produit/deodorant-naturel-eclaircissant/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/Deodorant-naturel-eclaircissant.webp"
   },
   {
     "id": "1552",
@@ -355,7 +370,8 @@
     "prix_tnd": 114.1,
     "lien_produit": "https://equilibremedical.com/produit/pack-vitamine-et-cafeine-tous-types-de-peaux/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/gamme-vitamine-c-cafeine-tous-types-de-peaux-equilibre-medical-tunisie-.webp"
   },
   {
     "id": "1554",
@@ -377,7 +393,8 @@
     "prix_tnd": 51.5,
     "lien_produit": "https://equilibremedical.com/produit/creme-solaire-peaux-mixtes-a-seches/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/Creme-solaire-peaux-mixtes-a-grasses.webp"
   },
   {
     "id": "1556",
@@ -399,7 +416,8 @@
     "prix_tnd": 51.5,
     "lien_produit": "https://equilibremedical.com/produit/creme-solaire-peaux-normales-a-seches/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/Creme-solaire-peaux-normales-a-seches.webp"
   },
   {
     "id": "1561",
@@ -421,7 +439,8 @@
     "prix_tnd": 40.0,
     "lien_produit": "https://equilibremedical.com/produit/creme-visage-vitamine-c-et-cafeine/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/creme-visage-vitamine-c-equilibre-medical-tunisie.webp"
   },
   {
     "id": "1563",
@@ -445,7 +464,8 @@
     "prix_tnd": 26.4,
     "lien_produit": "https://equilibremedical.com/produit/mousse-nettoyante-vitamine-c-et-cafeine/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/Mousse-nettoyante-vitamine-c-tous-types-de-peaux-esuilibre-medical-tunisie.webp"
   },
   {
     "id": "1565",
@@ -467,7 +487,8 @@
     "prix_tnd": 64.0,
     "lien_produit": "https://equilibremedical.com/produit/serum-visage-vitamine-c-et-cafeine/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/Serum-vitamine-c-tous-types-de-peaux-equilibre-medical-tunisie.webp"
   },
   {
     "id": "1816",
@@ -488,7 +509,8 @@
     "prix_tnd": 93.1,
     "lien_produit": "https://equilibremedical.com/produit/pack-adolescent-peau-mixte-a-grasse/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/pack-masque-et-creme-solaire.webp"
   },
   {
     "id": "1818",
@@ -508,7 +530,8 @@
     "prix_tnd": 133.7,
     "lien_produit": "https://equilibremedical.com/produit/pack-anti-taches-eclat/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/Pack-vitamine-c-patch-anti-cernes.webp"
   },
   {
     "id": "1820",
@@ -524,7 +547,8 @@
     "prix_tnd": 26.6,
     "lien_produit": "https://equilibremedical.com/produit/pack-deodorants-duo/",
     "en_stock": true,
-    "besoin_verification_description": true
+    "besoin_verification_description": true,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/pack-deodorant-naturel-tunisie.webp"
   },
   {
     "id": "1822",
@@ -546,7 +570,8 @@
     "prix_tnd": 154.0,
     "lien_produit": "https://equilibremedical.com/produit/pack-eclat-du-matin/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/Soin-visage_protection-solaire_equilibre-medical-tunisie.webp"
   },
   {
     "id": "1824",
@@ -567,7 +592,8 @@
     "prix_tnd": 164.5,
     "lien_produit": "https://equilibremedical.com/produit/pack-homme-essentiel/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/pack-soin-corps-et-visage-pieds.webp"
   },
   {
     "id": "1826",
@@ -587,7 +613,8 @@
     "prix_tnd": 93.1,
     "lien_produit": "https://equilibremedical.com/produit/pack-jeunesse-detox/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/pack-soin-visage-antiage.webp"
   },
   {
     "id": "1828",
@@ -603,7 +630,8 @@
     "prix_tnd": 40.6,
     "lien_produit": "https://equilibremedical.com/produit/pack-masques-soin-hebdomadaire/",
     "en_stock": true,
-    "besoin_verification_description": true
+    "besoin_verification_description": true,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/PAck-soin-visage-masque-visage-patch.webp"
   },
   {
     "id": "1830",
@@ -621,7 +649,8 @@
     "prix_tnd": 123.9,
     "lien_produit": "https://equilibremedical.com/produit/pack-peau-sensible-seche-solaire-confort/",
     "en_stock": true,
-    "besoin_verification_description": true
+    "besoin_verification_description": true,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/pack-soin-main-et-visage.webp"
   },
   {
     "id": "1832",
@@ -637,7 +666,8 @@
     "prix_tnd": 142.8,
     "lien_produit": "https://equilibremedical.com/produit/pack-premium-eclat-absolu-rituel-visage-complet/",
     "en_stock": true,
-    "besoin_verification_description": true
+    "besoin_verification_description": true,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/pack-vitamin-c-et-cafeine-et-serum-patch.webp"
   },
   {
     "id": "1834",
@@ -653,7 +683,8 @@
     "prix_tnd": 181.3,
     "lien_produit": "https://equilibremedical.com/produit/pack-premium-regeneration-intense-nuit-reparation/",
     "en_stock": true,
-    "besoin_verification_description": true
+    "besoin_verification_description": true,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/pack-equilibre-medical-tunisie.webp"
   },
   {
     "id": "1836",
@@ -669,7 +700,8 @@
     "prix_tnd": 64.4,
     "lien_produit": "https://equilibremedical.com/produit/pack-purete-detox/",
     "en_stock": true,
-    "besoin_verification_description": true
+    "besoin_verification_description": true,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/pack-soins-visage-corps.webp"
   },
   {
     "id": "1838",
@@ -685,7 +717,8 @@
     "prix_tnd": 118.3,
     "lien_produit": "https://equilibremedical.com/produit/pack-regeneration-nocturne/",
     "en_stock": true,
-    "besoin_verification_description": true
+    "besoin_verification_description": true,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/Soin-viage-vitamine-C-Tunisie.webp"
   },
   {
     "id": "1840",
@@ -701,7 +734,8 @@
     "prix_tnd": 93.1,
     "lien_produit": "https://equilibremedical.com/produit/pack-spa-a-la-maison/",
     "en_stock": true,
-    "besoin_verification_description": true
+    "besoin_verification_description": true,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/pack-soin-visage-cheveux-corps.webp"
   },
   {
     "id": "2076",
@@ -725,7 +759,8 @@
     "prix_tnd": 10.0,
     "lien_produit": "https://equilibremedical.com/produit/masque-serum-anti-taches/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/masque-serum-antitaches-thevert-equilibre-medical-tunisie-1.webp"
   },
   {
     "id": "2078",
@@ -749,7 +784,8 @@
     "prix_tnd": 10.0,
     "lien_produit": "https://equilibremedical.com/produit/masque-serum-anti-rides-soie-et-peptides/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/serum-masque-visage-antirides-equilibre-medical-tunisie-1.webp"
   },
   {
     "id": "2080",
@@ -773,7 +809,8 @@
     "prix_tnd": 10.0,
     "lien_produit": "https://equilibremedical.com/produit/masque-serum-anti-age-grenade-et-safran/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/Serum-masque-anti-age.webp"
   },
   {
     "id": "2082",
@@ -797,7 +834,8 @@
     "prix_tnd": 10.0,
     "lien_produit": "https://equilibremedical.com/produit/masque-serum-visage-anti-rougeur-miel-beurre-dolive-et-acide-hyaluronique/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/masque-serum-anti-rougeurs-equilibre-medical-tunisie-1.webp"
   },
   {
     "id": "2084",
@@ -822,7 +860,8 @@
     "prix_tnd": 10.0,
     "lien_produit": "https://equilibremedical.com/produit/masque-serum-anti-pollution-charbon-vegetal/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/masque-serum-antipollution-charbon-equilibre-medical-tunisie-1.webp"
   },
   {
     "id": "2086",
@@ -846,7 +885,8 @@
     "prix_tnd": 10.0,
     "lien_produit": "https://equilibremedical.com/produit/masque-serum-anti-fatigue-vitamine-c-et-cafeine/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/serum-masque-anti-fatigue.webp"
   },
   {
     "id": "2088",
@@ -869,7 +909,8 @@
     "prix_tnd": 13.0,
     "lien_produit": "https://equilibremedical.com/produit/patch-anti-cernes-vitamine-c-cafeine/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/patch-masque-anti-cernes.webp"
   },
   {
     "id": "2090",
@@ -894,7 +935,8 @@
     "prix_tnd": 13.0,
     "lien_produit": "https://equilibremedical.com/produit/patch-anti-age-grenade-safran/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2025/11/patch-masque-anti-age.webp"
   },
   {
     "id": "2495",
@@ -910,7 +952,8 @@
     "prix_tnd": 77.0,
     "lien_produit": "https://equilibremedical.com/produit/pack-hydratation-douceur/",
     "en_stock": true,
-    "besoin_verification_description": false
+    "besoin_verification_description": false,
+    "image": "https://equilibremedical.com/wp-content/uploads/2026/01/pack.webp"
   },
   {
     "id": "2755",
@@ -927,7 +970,8 @@
     "lien_produit": "https://equilibremedical.com/produit/pack-15-patchs/",
     "en_stock": true,
     "besoin_verification_description": true,
-    "type_pack": "composable"
+    "type_pack": "composable",
+    "image": "https://equilibremedical.com/wp-content/uploads/2026/05/pack-15-patchs-.webp"
   },
   {
     "id": "2766",
@@ -956,7 +1000,8 @@
     "lien_produit": "https://equilibremedical.com/produit/pack-de-6-serum-masque-visage/",
     "en_stock": true,
     "besoin_verification_description": true,
-    "type_pack": "composable"
+    "type_pack": "composable",
+    "image": "https://equilibremedical.com/wp-content/uploads/2026/05/pack-6-serum-masque-visage-.webp"
   },
   {
     "id": "2784",
@@ -973,7 +1018,8 @@
     "lien_produit": "https://equilibremedical.com/produit/3-eme-gratuit/",
     "en_stock": true,
     "besoin_verification_description": true,
-    "type_pack": "composable"
+    "type_pack": "composable",
+    "image": "https://equilibremedical.com/wp-content/uploads/2026/05/3-eme-gratuit-.webp"
   },
   {
     "id": "2803",
@@ -989,6 +1035,7 @@
     "prix_tnd": 136.5,
     "lien_produit": "https://equilibremedical.com/produit/pack-summer-essentials/",
     "en_stock": true,
-    "besoin_verification_description": true
+    "besoin_verification_description": true,
+    "image": "https://equilibremedical.com/wp-content/uploads/2026/06/Pack-summer-essentials.webp"
   }
 ]
