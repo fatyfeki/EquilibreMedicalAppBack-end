@@ -325,7 +325,11 @@ function extractProductReferences(rawText) {
         nom: product.nom,
         prix_tnd: product.prix_tnd ?? null,
         categorie: product.categorie,
+        sous_categorie: product.sous_categorie || null,
         lien_produit: product.lien_produit,
+        image: product.image ?? null,
+        description_courte: product.description_courte || null,
+        actifs_cles: (product.actifs_cles || []).slice(0, 3),
       });
     }
   }
